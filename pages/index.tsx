@@ -1,4 +1,5 @@
 import { getPosts } from '../utils/mdx-utils';
+import { useEffect, useState } from 'react';
 
 import Layout from '../components/Layout';
 import { getGlobalData } from '../utils/global-data';
@@ -7,14 +8,16 @@ import background from '../public/images/home-bg.png';
 import logo from '../public/images/wordmark.svg';
 import logoWhite from '../public/images/wordmark-white.svg';
 import Image from 'next/image';
-import { isMobile } from 'react-device-detect';
 
 export default function Index({ globalData }) {
+  const { width } = useWindowSize();
+  const onMobile = width < 520;
+
   return (
     <Layout>
       <SEO title={globalData.name} description={globalData.blogTitle} />
       <div className="h-screen w-screen bg-[100% 100%] bg-center p-6 lg:py-32 lg:px-52 flex flex-col justify-between" style={{ backgroundImage: `url(${background.src})` }}>
-        <Image src={isMobile ? logoWhite.src : logo.src} alt="logo" width={300} height={97} />
+        <Image src={onMobile ? logoWhite.src : logo.src} alt="logo" width={300} height={97} />
         <footer className="flex flex-col shrink-0 lg:pl-8 min-[1500px]:flex-row min-[1700px]:pr-52 w-full self-end justify-between text-2xl text-white gap-y-6">
           <div className="flex flex-col">
             <h5 className="text-4xl font-bold">Diane L. Womack</h5>
@@ -39,4 +42,36 @@ export function getStaticProps() {
   const globalData = getGlobalData();
 
   return { props: { posts, globalData } };
+}
+
+// Hook
+function useWindowSize() {
+  // Initialize state with undefined width/height so server and client renders match
+  // Learn more here: https://joshwcomeau.com/react/the-perils-of-rehydration/
+  const [windowSize, setWindowSize] = useState({
+    width: undefined,
+    height: undefined,
+  });
+
+  useEffect(() => {
+    // only execute all the code below in client side
+    // Handler to call on window resize
+    function handleResize() {
+      // Set window width/height to state
+      setWindowSize({
+        width: window.innerWidth,
+        height: window.innerHeight,
+      });
+    }
+
+    // Add event listener
+    window.addEventListener("resize", handleResize);
+
+    // Call handler right away so state gets updated with initial window size
+    handleResize();
+
+    // Remove event listener on cleanup
+    return () => window.removeEventListener("resize", handleResize);
+  }, []); // Empty array ensures that effect is only run on mount
+  return windowSize;
 }
