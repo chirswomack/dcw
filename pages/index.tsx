@@ -1,22 +1,20 @@
-import Link from 'next/link';
 import { getPosts } from '../utils/mdx-utils';
 
-import Footer from '../components/Footer';
-import Header from '../components/Header';
 import Layout from '../components/Layout';
-import ArrowIcon from '../components/ArrowIcon';
 import { getGlobalData } from '../utils/global-data';
 import SEO from '../components/SEO';
 import background from '../public/images/home-bg.png';
 import logo from '../public/images/wordmark.svg';
+import logoWhite from '../public/images/wordmark-white.svg';
 import Image from 'next/image';
+import { isMobile } from 'react-device-detect';
 
-export default function Index({ posts, globalData }) {
+export default function Index({ globalData }) {
   return (
     <Layout>
       <SEO title={globalData.name} description={globalData.blogTitle} />
       <div className="h-screen w-screen bg-[100% 100%] bg-center p-6 lg:py-32 lg:px-52 flex flex-col justify-between" style={{ backgroundImage: `url(${background.src})` }}>
-        <Image src={logo.src} alt="logo" width={300} height={97} />
+        <Image src={isMobile ? logoWhite.src : logo.src} alt="logo" width={300} height={97} />
         <footer className="flex flex-col shrink-0 lg:pl-8 min-[1500px]:flex-row min-[1700px]:pr-52 w-full self-end justify-between text-2xl text-white gap-y-6">
           <div className="flex flex-col">
             <h5 className="text-4xl font-bold">Diane L. Womack</h5>
