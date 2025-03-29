@@ -24,8 +24,8 @@ export default function Index({ globalData }) {
             <p className="font-bold text-brand-green">Managing Director</p>
           </div>
           <div className="flex flex-col">
-            <h6 className="font-bold">407.204.1367</h6>
-            <p className="font-medium">diane@dcwadvisory.com</p>
+            <a className="font-bold" href="tel:+14072041367">407.204.1367</a>
+            <a className="font-medium" href="mailto:diane@dcwadvisory.com">diane@dcwadvisory.com</a>
           </div>
           <div className="flex flex-col">
             <span className="font-medium">618 E South Street, Suite 110 <br />
