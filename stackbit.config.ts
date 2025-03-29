@@ -5,7 +5,8 @@ import { GitContentSource } from '@stackbit/cms-git';
 export default defineStackbitConfig({
     stackbitVersion: '~0.6.0',
     ssgName: 'nextjs',
-    nodeVersion: '18',
+    nodeVersion: '19',
+    devCommand: 'node_modules/.bin/next dev -- --port {PORT} --hostname 127.0.0.1',
     contentSources: [
         new GitContentSource({
             rootPath: __dirname,
@@ -17,11 +18,12 @@ export default defineStackbitConfig({
                     urlPath: "/posts/{slug}",
                     filePath: "posts/{slug}.mdx",
                     fields: [
-                        { name: "title", type: "string", required: true, default: 'Post Title' }, 
+                        { name: "title", type: "string", required: true, default: 'Post Title' },
                         { name: "description", type: "string", default: 'Post description goes here' },
                         { name: "date", type: "date", required: true },
                     ]
-                  }
+                },
+
             ],
             assetsConfig: {
                 referenceType: 'static',

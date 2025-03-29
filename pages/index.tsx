@@ -20,8 +20,8 @@ export default function Index({ globalData }) {
         <Image src={onMobile ? logoWhite.src : logo.src} alt="logo" width={300} height={97} />
         <footer className="flex flex-col shrink-0 lg:pl-8 min-[1500px]:flex-row min-[1700px]:pr-52 w-full self-end justify-between text-2xl text-white gap-y-6">
           <div className="flex flex-col">
-            <h5 className="text-4xl font-bold">Diane L. Womack</h5>
-            <p className="font-bold text-brand-green">Managing Director</p>
+            <h5 className="text-4xl font-bold select-none">Diane L. Womack</h5>
+            <p className="font-bold text-brand-green select-none">Managing Director</p>
           </div>
           <div className="flex flex-col">
             <a className="font-bold" href="tel:+14072041367">407.204.1367</a>
