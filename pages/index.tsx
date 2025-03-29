@@ -18,7 +18,7 @@ export default function Index({ globalData }) {
       <SEO title={globalData.name} description={globalData.blogTitle} />
       <div className="h-screen w-screen bg-[100% 100%] bg-center p-6 lg:py-32 lg:px-52 flex flex-col justify-between" style={{ backgroundImage: `url(${background.src})` }}>
         <Image src={onMobile ? logoWhite.src : logo.src} alt="logo" width={300} height={97} />
-        <p className="text-7xl font-bold text-white max-w-[500px] leading-[1.04] lg:pl-8">We are currently working on our website</p>
+        <p className="text-5xl min-[1500px]:text-7xl font-bold text-white max-w-[350px] min-[1500px]:max-w-[500px] leading-[1.04] lg:pl-8">We are currently working on our website</p>
         <footer className="flex flex-col shrink-0 lg:pl-8 min-[1500px]:flex-row min-[1700px]:pr-52 w-full self-end justify-between text-2xl text-white gap-y-6">
           <div className="flex flex-col">
             <h5 className="text-4xl font-bold select-none">Diane L. Womack</h5>
