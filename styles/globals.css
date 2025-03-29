@@ -1,5 +1,6 @@
 @import 'tailwindcss';
 @plugin '@tailwindcss/typography';
+@config "../tailwind.config.mjs";
 
 @theme static {
   --color-primary: var(--theme-primary);
@@ -14,6 +15,7 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @layer base {
+
   h1,
   h2,
   h3,
