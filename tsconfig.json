@@ -29,7 +29,8 @@
         "next-env.d.ts",
         "**/*.ts",
         "**/*.tsx",
-        "utils/mdx-utils.js"
+        "utils/mdx-utils.js",
+        "pages/_document.jsx"
     ],
     "exclude": [
         "node_modules"
