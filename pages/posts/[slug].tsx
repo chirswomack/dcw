@@ -13,7 +13,7 @@ import ArrowIcon from '../../components/ArrowIcon';
 import CustomImage from '../../components/CustomImage';
 import CustomLink from '../../components/CustomLink';
 import Footer from '../../components/Footer';
-import Header from '../../components/Header';
+import PostHeader from '../../components/PostHeader';
 import Layout from '../../components/Layout';
 import SEO from '../../components/SEO';
 
@@ -44,7 +44,7 @@ export default function PostPage({
         title={`${frontMatter.title} - ${globalData.name}`}
         description={frontMatter.description}
       />
-      <Header name={globalData.name} />
+      <PostHeader name={globalData.name} />
       <article className="px-6 md:px-0" data-sb-object-id={`posts/${slug}.mdx`}>
         <header>
           <h1
