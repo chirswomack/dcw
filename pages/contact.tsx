@@ -30,8 +30,8 @@ export default function Contact() {
           <div className="flex flex-col max-w-6xl bg-brand-blue rounded-[40px] relative pt-19 pb-28 px-38">
             <Compass className="absolute top-0 right-0 z-50 -translate-x-full -translate-y-1/2 size-30 fill-brand-green" />
             <p className="text-white font-bold max-w-lg mb-16">
-              Please fill out the form below, and we'll be in touch as soon as
-              possible. We look forward to assisting you.
+              Please fill out the form below, and we&#39;ll be in touch as soon
+              as possible. We look forward to assisting you.
             </p>
             <form className="flex flex-col gap-y-8 w-4xl">
               <input

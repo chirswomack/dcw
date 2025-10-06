@@ -39,7 +39,7 @@ export default function About() {
         <section className="first-section flex flex-col items-center justify-center w-full relative z-15 bg-brand-blue pt-40 pb-32 rounded-b-[40px]">
           <p className="text-md text-white mb-8 max-w-2xl text-center relative z-15">
             When financial disputes arise, uncertainty and challenges often
-            follow. Whether you're dealing with a business disagreement, a
+            follow. Whether you&apos;re dealing with a business disagreement, a
             divorce, or a complex valuation, you need more than opinions—you
             need clarity grounded in evidence.
           </p>
@@ -72,7 +72,7 @@ export default function About() {
         </section>
         <section className="flex flex-col items-center text-white bg-brand-blue rounded-t-[40px] justify-center w-full py-32 z-25 relative">
           <h6 className="uppercase font-bold text-center mb-15 max-w-lg z-10">
-            Here's how we help you move forward
+            Here&apos;s how we help you move forward
           </h6>
           <IconList
             className="z-10"
@@ -240,11 +240,11 @@ export default function About() {
                 matrimonial disputes.
                 <br />
                 <br />
-                Diane's analytical skills, strategic insight, and dedication to
-                client success have made her a sought-after expert in forensic
-                accounting. She works closely with clients to transform
-                complexity into clarity, ensuring every case is handled
-                professionally and transparently.
+                Diane&apos;s analytical skills, strategic insight, and
+                dedication to client success have made her a sought-after expert
+                in forensic accounting. She works closely with clients to
+                transform complexity into clarity, ensuring every case is
+                handled professionally and transparently.
               </p>
             </div>
           </div>

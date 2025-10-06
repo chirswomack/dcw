@@ -44,11 +44,11 @@ export default function BusinessValuation() {
           <p className="max-w-xl mt-18">
             Determining the accurate value of a business is vital to making
             informed decisions in mergers, acquisitions, shareholder
-            disputes,and marital dissolutions. DCW Advisory Group's experienced
-            professionals provide objective, defensible business valuations. We
-            analyze operations, market trends, historical financial data, and
-            relevant economic factors, offering detailed valuation reports
-            tailored to your specific needs.
+            disputes,and marital dissolutions. DCW Advisory Group&#39;s
+            experienced professionals provide objective, defensible business
+            valuations. We analyze operations, market trends, historical
+            financial data, and relevant economic factors, offering detailed
+            valuation reports tailored to your specific needs.
           </p>
         </IntroSection>
         <ServicesListSection

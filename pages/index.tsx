@@ -113,7 +113,7 @@ export default function Index({ globalData }) {
             </h3>
             <h6 className="font-bold">Trusted forensic accounting expertise</h6>
             <p className="mb-8">
-              Our team's meticulous analysis ensures your case is built on
+              Our team&#39;s meticulous analysis ensures your case is built on
               reliable, expert guidance.
             </p>
             <h6 className="font-bold">Tailored, integrity-driven solutions</h6>
