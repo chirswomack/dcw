@@ -1,5 +1,5 @@
-import tailwindcssAnimate from 'tailwindcss-animate'
-import typography from '@tailwindcss/typography'
+import tailwindcssAnimate from 'tailwindcss-animate';
+import typography from '@tailwindcss/typography';
 
 /** @type {import('tailwindcss').Config} */
 const config = {
@@ -34,20 +34,20 @@ const config = {
     },
     extend: {
       colors: {
+        'light-blue': '#005FC6',
         brand: {
           green: '#00C112',
           blue: '#00364C',
         },
-        'light-blue': '#005FC6',
       },
       fontFamily: {
         sans: ['Encode Sans Semi Expanded', 'sans-serif'],
       },
       spacing: {
-        '18': '4.5rem'
-      }
+        18: '4.5rem',
+      },
     },
   },
-}
+};
 
-export default config
+export default config;

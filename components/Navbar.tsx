@@ -33,7 +33,7 @@ export default function Navbar({ activeRoute }: NavbarProps) {
                 <ul className="flex space-x-8 items-center">
                     <li><Link href="/forensic-accounting" className={computeStyles(NavbarRoute.ForensicAccounting)}>Forensic Accounting</Link></li>
                     <li><Link href="/business-valuation" className={computeStyles(NavbarRoute.BusinessValuation)}>Business Valuation</Link></li>
-                    <li><Link href="/collaborative-divorce" className={computeStyles(NavbarRoute.CollaborativeDivorce)}>Collaborative</Link></li>
+                    <li><Link href="/collaborative-divorce" className={computeStyles(NavbarRoute.CollaborativeDivorce)}>Collaborative Divorce</Link></li>
                     <li><Link href="/litigation-consulting" className={computeStyles(NavbarRoute.LitigationConsulting)}>Litigation Consulting</Link></li>
                     <li><Link href="/about" className={computeStyles(NavbarRoute.About)}>About</Link></li>
                     <li><Button variant={contactButtonVariant}><Link href="/contact">Contact</Link></Button></li>

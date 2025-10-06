@@ -10,14 +10,16 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto flex items-center justify-around">
         <Logo width={206} height={67} />
         <div className="flex items-center gap-x-4">
-          <Icon name={IconName.Phone} size="sm" />
+          <Icon name={IconName.Phone} size="xs" />
           <Phone />
         </div>
         <div className="flex items-center gap-x-4">
-          <Icon name={IconName.Pin} size="sm" />
+          <Icon name={IconName.Pin} size="xs" />
           <Address />
         </div>
-        <Link href="https://www.linkedin.com/in/diane-womack-43a66229/"><Icon name={IconName.Linkedin} size="sm" /></Link>
+        <Link href="https://www.linkedin.com/in/diane-womack-43a66229/">
+          <Icon name={IconName.Linkedin} size="xs" />
+        </Link>
       </div>
     </footer>
   );

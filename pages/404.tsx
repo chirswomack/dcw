@@ -12,7 +12,9 @@ export default function PageNotFound() {
         <Layout>
             <div className="flex flex-col items-center w-screen h-screen">
                 <Navbar />
-                <div className="h-full w-full bg-[100% 100%] bg-center flex-grow" style={{ backgroundImage: `url(${background.src})` }} />
+                <div className="flex h-full w-full bg-[100% 100%] bg-center flex-grow items-center" style={{ backgroundImage: `url(${background.src})` }}>
+                    <h1 className="text-3xl font-bold text-white max-w-lg relative left-[12%] px-3">Sorry, this page is no longer here.</h1>
+                </div>
                 <Footer />
             </div>
         </Layout>
