@@ -14,17 +14,17 @@ import Compass from 'components/graphics/compass.svg';
 import Button, { ButtonVariant } from 'components/Button';
 import { IconList } from 'components/IconList';
 import { Icon, IconName } from 'components/icons';
-import star from 'public/images/star.svg?url';
 import Diane from 'public/images/diane.png';
 import staircase from 'public/images/staircase.png';
+import CredentialsList from 'components/CredentialsList';
 
 export default function About() {
   return (
     <Layout>
       <Navbar activeRoute="/about" />
       <div className="flex flex-col w-screen">
-        <Hero src={hero.src} blurbBg="brand-green">
-          <p className="text-3xl font-bold">
+        <Hero src={hero.src} blurbBg="brand-green" backgroundPositionX="65%">
+          <p className="text-[35px] leading-[1.033] w-[150%] md:text-3xl font-bold">
             <span className="text-white">
               Clarity in
               <br />
@@ -36,19 +36,23 @@ export default function About() {
             conflict
           </p>
         </Hero>
-        <section className="first-section flex flex-col items-center justify-center w-full relative z-15 bg-brand-blue pt-40 pb-32 rounded-b-[40px]">
-          <p className="text-md text-white mb-8 max-w-2xl text-center relative z-15">
+        <section className="first-section px-13 flex flex-col items-center justify-center w-full relative z-15 bg-brand-blue pt-50 pb-55 md:pt-40 md:pb-32 md:rounded-b-[40px]">
+          <p className="text-white mb-8 max-w-2xl text-left relative z-15 md:text-center md:text-md">
             When financial disputes arise, uncertainty and challenges often
             follow. Whether you&apos;re dealing with a business disagreement, a
             divorce, or a complex valuation, you need more than opinions—you
             need clarity grounded in evidence.
           </p>
           <CompassHalf
-            className="absolute right-0 bottom-0 h-[98%] z-1"
+            className="absolute z-1 bottom-0 right-0 w-[95%] md:w-auto md:h-[98%]"
             fill="white"
           />
+          <CornerCut
+            variant={CornerCutVariant.BottomRight}
+            className="visible md:invisible"
+          />
         </section>
-        <section className="w-full flex justify-center gap-x-45 py-43 relative">
+        <section className="w-full flex flex-col px-12 pt-18 pb-20 gap-y-17 justify-center gap-x-45 md:py-43 relative md:flex-row">
           <div className="max-w-[471px] z-15">
             <img
               src={building.src}
@@ -68,9 +72,9 @@ export default function About() {
               cases.
             </p>
           </div>
-          <CompassQuarter className="absolute bottom-[80px] left-[7%] z-10 w-[712px] fill-brand-green" />
+          <CompassQuarter className="absolute w-[351px] inset-y-[-180px] left-[6%] md:inset-y-auto md:bottom-[80px] md:left-[7%] z-10 md:w-[712px] fill-brand-green" />
         </section>
-        <section className="flex flex-col items-center text-white bg-brand-blue rounded-t-[40px] justify-center w-full py-32 z-25 relative">
+        <section className="flex flex-col items-center px-15 pt-20 pb-30 text-white bg-brand-blue rounded-t-2xl md:rounded-t-[40px] justify-center w-full md:py-32 z-25 relative">
           <h6 className="uppercase font-bold text-center mb-15 max-w-lg z-10">
             Here&apos;s how we help you move forward
           </h6>
@@ -96,44 +100,48 @@ export default function About() {
             When the financial picture is unclear, DCW Advisory Group brings
             precision, clarity, and integrity to every case.
           </p>
-          <Compass className="absolute inset-1/2 -translate-1/2 h-[80%] z-1 fill-[#00293A]" />
+          <Compass className="absolute inset-1/2 -translate-x-1/2 -translate-y-3/4 w-[90%] md:-translate-y-1/2 md:w-auto md:h-[80%] z-1 fill-[#00293A]" />
           <CornerCut fill="fill-[#0155AE]" />
         </section>
         <section
-          className="bg-[#0155AE] py-22 bg-no-repeat"
+          className="bg-[#0155AE] py-22 bg-no-repeat bg-size-[85%]"
           style={{
             backgroundImage: `url(${staircase.src})`,
             backgroundPosition: '75% 100%',
           }}
         >
-          <div
-            className={`flex flex-col max-w-md z-50 relative inset-1/6 py-15 pl-18 rounded-l-[40px] bg-brand-green`}
-          >
-            <h4 className="font-bold text-lg text-white">
+          <div className="flex flex-col h-[330px] md:h-auto max-w-[calc(100vw-(--spacing(43)))] md:max-w-md z-50 relative inset-x-12 inset-y-60 pl-10 pt-12 pb-15 md:inset-1/6 md:py-15 md:pl-18 rounded-l-[40px] bg-brand-green">
+            <h4 className="font-bold text-[20px] w-[125%] leading-[1.09] md:w-auto md:text-lg text-white">
               Let us guide you toward resolution, with clarity that holds up in
               court and confidence that carries you forward.
             </h4>
-            <Button variant={ButtonVariant.Blue} className="mt-12 self-start">
+            <Button
+              variant={ButtonVariant.Blue}
+              className="mt-8 md:mt-12 self-start"
+            >
               Book a consultation
             </Button>
             <BlurbArrow
-              className={`z-50 absolute top-0 inset-full h-full fill-brand-green`}
+              className={`-z-1 absolute top-0 inset-full h-full fill-brand-green`}
             />
           </div>
         </section>
-        <section className="py-28">
-          <div className="flex justify-center mx-auto gap-x-32 text-light-blue">
-            <div className="flex flex-col items-center text-center bg-[#f9f9f9] w-1/4 pt-16 px-11 pb-12 rounded-[26px]">
-              <Icon name={IconName.Vision} className="w-35" />
-              <h5 className="font-bold mt-10 text-xl">Vision</h5>
+        <section className="pt-52 pb-28 md:py-28">
+          <div className="flex flex-col justify-center mx-auto px-13 gap-y-16 gap-x-32 text-light-blue md:flex-row">
+            <div className="flex flex-col items-center text-center bg-[#f9f9f9] w-full md:w-1/4 pt-16 px-11 pb-12 rounded-[26px]">
+              <Icon name={IconName.Vision} className="w-25 md:w-35" />
+              <h5 className="font-bold mt-10 text-lg md:text-xl">Vision</h5>
               <p className="font-medium mt-5">
                 To empower individuals and businesses to navigate complex
                 financial challenges with clarity and confidence.
               </p>
             </div>
-            <div className="flex flex-col items-center text-center bg-[#f9f9f9] w-1/4 pt-16 px-11 pb-12 rounded-[26px]">
-              <Icon name={IconName.Mission} />
-              <h5 className="font-bold mt-10 text-xl">Mission</h5>
+            <div className="flex flex-col items-center text-center bg-[#f9f9f9] w-full md:w-1/4 pt-16 px-11 pb-12 rounded-[26px]">
+              <Icon
+                name={IconName.Mission}
+                className="w-18! h-18! md:size-26!"
+              />
+              <h5 className="font-bold mt-10 text-lg md:text-xl">Mission</h5>
               <p className="font-medium mt-5">
                 To provide expert forensic accounting, valuation, and litigation
                 support with integrity, professionalism and compassionate
@@ -142,8 +150,8 @@ export default function About() {
             </div>
           </div>
         </section>
-        <section className="flex flex-col items-center text-white bg-brand-blue justify-center w-full py-32 z-25 relative">
-          <h2 className="text-2xl font-bold text-center mb-20 max-w-lg z-10">
+        <section className="flex flex-col items-center text-white bg-brand-blue justify-center w-full pt-20 pb-32 md:py-32 z-25 relative">
+          <h2 className="text-xl md:text-2xl font-bold text-center mb-20 max-w-lg z-10">
             Values
           </h2>
           <IconList
@@ -172,13 +180,16 @@ export default function About() {
               },
             ]}
           />
-          <Compass className="absolute inset-1/2 -translate-1/2 h-[80%] z-1 fill-[#00293A]" />
+          <Compass className="absolute inset-1/2 -translate-x-1/2 -translate-y-3/4 w-[90%] md:-translate-y-1/2 md:w-auto md:h-[80%] z-1 fill-[#00293A]" />
           <CornerCut variant={CornerCutVariant.BottomRight} />
         </section>
-        <section className="meet-our-founder pt-16 pb-38">
-          <div className="flex gap-x-25 items-center justify-center mx-auto relative">
+        <section className="meet-our-founder pt-16 pb-38 px-10">
+          <div className="flex flex-col md:flex-row gap-x-25 items-center justify-center mx-auto relative">
+            <h2 className="text-[35px] leading-[1.033] text-center font-bold mb-9 z-10 md:hidden">
+              Meet Our Founder
+            </h2>
             <div className="flex flex-col items-end max-w-lg z-10">
-              <div className="relative self-start mb-32">
+              <div className="relative self-start mb-13 md:mb-32">
                 <img
                   src={Diane.src}
                   alt="Diane L. Womack, CPA"
@@ -186,33 +197,13 @@ export default function About() {
                 />
                 <CompassQuarter className="absolute bottom-[-40px] right-[-10px] z-20 fill-brand-green h-[164px] -scale-x-100" />
               </div>
-              <div>
-                <h6 className="uppercase font-bold mb-4">
-                  Credentials and Certifications
-                </h6>
-                <ul
-                  className="pl-6"
-                  style={{ listStyleImage: `url(${star.src})` }}
-                >
-                  <li className="pl-2 mb-3">
-                    Certified Public Accountant (Florida and New York)
-                  </li>
-                  <li className="pl-2 mb-3">
-                    Accredited in Business Valuation
-                  </li>
-                  <li className="pl-2 mb-3">
-                    Certified in Financial Forensics
-                  </li>
-                  <li className="pl-2 mb-3">Certified Fraud Examiner</li>
-                  <li className="pl-2">
-                    Accredited Collaborative Professional
-                  </li>
-                </ul>
-              </div>
+              <CredentialsList className="hidden md:block" />
             </div>
-            <div className="max-w-md mt-16">
-              <h2 className="text-xl font-bold mb-7 z-10">Meet Our Founder</h2>
-              <div className="mb-10">
+            <div className="max-w-md md:mt-16">
+              <h2 className="text-xl font-bold mb-7 z-10 hidden md:block">
+                Meet Our Founder
+              </h2>
+              <div className="mb-10 text-center md:text-left">
                 <h4 className="text-lg font-bold">Diane Womack</h4>
                 <h5 className="text-md">CPA, ABV, CFF, CFE</h5>
                 <h6 className="uppercase text-brand-green font-bold mt-4">
@@ -246,6 +237,7 @@ export default function About() {
                 transform complexity into clarity, ensuring every case is
                 handled professionally and transparently.
               </p>
+              <CredentialsList className="mt-14 md:hidden" />
             </div>
           </div>
         </section>

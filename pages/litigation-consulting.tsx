@@ -25,13 +25,13 @@ export default function LitigationConsulting() {
     <Layout>
       <Navbar activeRoute="/litigation-consulting" />
       <div className="flex flex-col w-screen">
-        <Hero src={hero.src}>
-          <h1 className="text-[55px] leading-[.953] font-bold text-white">
+        <Hero src={hero.src} backgroundPositionX="90%">
+          <h1 className="text-[35px] md:text-[55px] leading-[.953] font-bold text-white">
             Litigation
             <br />
             Consulting
           </h1>
-          <p className="mt-8 text-[25px] font-bold leading-[1.103] text-brand-green shrink">
+          <p className="mt-5 md:mt-8 md:text-[25px] w-[150%] font-bold leading-[1.103] text-brand-green shrink">
             Strategic support for
             <br /> complex litigation
           </p>

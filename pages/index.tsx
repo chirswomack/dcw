@@ -19,6 +19,7 @@ import Credentials from 'components/Credentials';
 import Footer from 'components/Footer';
 import CtaSection from 'components/CtaSection';
 import whyChoose from '../public/images/why-choose.png';
+import { IconList } from 'components/IconList';
 
 export default function Index({ globalData }) {
   const { width } = useWindowSize();
@@ -29,8 +30,8 @@ export default function Index({ globalData }) {
       <SEO title={globalData.name} description={globalData.blogTitle} />
       <Navbar />
       <div className="flex flex-col w-screen">
-        <Hero src={hero.src} blurbBg="brand-green">
-          <p className="text-3xl font-bold">
+        <Hero src={hero.src} blurbBg="brand-green" backgroundPositionX="88%">
+          <p className="text-[35px] md:text-3xl font-bold w-[125%]">
             <span className="text-white">
               Bringing
               <br />
@@ -43,9 +44,9 @@ export default function Index({ globalData }) {
             disputes
           </p>
         </Hero>
-        <section className="first-section flex flex-col items-center justify-center w-full relative bg-brand-blue pt-20 pb-40">
-          <div className="flex mx-auto gap-x-40 justify-center">
-            <div className="w-1/4 mt-32">
+        <section className="first-section flex flex-col items-center justify-center w-full relative bg-brand-blue pt-50 pb-22 md:pt-20 md:pb-40">
+          <div className="flex flex-col px-13 gap-y-15 md:gap-y-0 md:flex-row md:mx-auto md:gap-x-40 justify-center">
+            <div className="w-full md:w-1/4 md:mt-32">
               <p className="text-white mb-8">
                 At DCW Advisory Group, we simplify financial challenges through
                 precise analysis, expert insights, and tailored solutions. From
@@ -59,49 +60,56 @@ export default function Index({ globalData }) {
                 </Button>
               </Link>
             </div>
-            <div className="w-1/4">
+            <div className="w-full md:w-1/4">
               <img src={chart.src} alt="Bar chart with increasing arrow" />
             </div>
           </div>
           <CornerCut variant={CornerCutVariant.BottomRight} />
         </section>
         <section className="services-section flex flex-col items-center justify-center w-full pt-18 pb-32 z-25 relative">
-          <h2 className="text-[50px] font-bold text-center mb-5">
+          <h2 className="text-[35px] md:text-[50px] font-bold text-center mb-5">
             Our Services
           </h2>
           <p className="text-center max-w-xl">
             We provide expert forensic accounting services to help you resolve
             complex financial disputes.
           </p>
-          <div className="grid grid-flow-col md:grid-cols-4 md:grid-flow-row md:items-stretch gap-x-25 max-w-7xl mt-18">
-            <ServiceBlurb
-              iconName={IconName.Calculator}
-              href="/forensic-accounting"
-              title="Forensic Accounting"
-              description="Investigating financial inconsistencies and providing reliable, unbiased dispute resolution analysis."
-            />
-            <ServiceBlurb
-              iconName={IconName.Bank}
-              href="/business-valuation"
-              title="Business Valuation"
-              description="Providing objective, reliable valuations to support critical business decisions."
-            />
-            <ServiceBlurb
-              iconName={IconName.Collaborative}
-              href="/collaborative-divorce"
-              title="Collaborative Divorce"
-              description="Analyzing financial information to facilitate a transparent client-focused process in marital dissolutions."
-            />
-            <ServiceBlurb
-              iconName={IconName.Gavel}
-              href="/litigation-consulting"
-              title="Litigation Consulting"
-              description="Evidence-based financial analysis and expert guidance. We provide specialized support for shareholder disputes, marital dissolution, and commercial litigation."
-            />
-          </div>
+          <IconList
+            className="mt-18"
+            listItems={[
+              {
+                iconName: IconName.Calculator,
+                href: '/forensic-accounting',
+                title: 'Forensic Accounting',
+                description:
+                  'Investigating financial inconsistencies and providing reliable, unbiased dispute resolution analysis.',
+              },
+              {
+                iconName: IconName.Bank,
+                href: '/business-valuation',
+                title: 'Business Valuation',
+                description:
+                  'Providing objective, reliable valuations to support critical business decisions.',
+              },
+              {
+                iconName: IconName.Collaborative,
+                href: '/collaborative-divorce',
+                title: 'Collaborative Divorce',
+                description:
+                  'Analyzing financial information to facilitate a transparent client-focused process in marital dissolutions.',
+              },
+              {
+                iconName: IconName.Gavel,
+                href: '/litigation-consulting',
+                title: 'Litigation Consulting',
+                description:
+                  'Evidence-based financial analysis and expert guidance. We provide specialized support for shareholder disputes, marital dissolution, and commercial litigation.',
+              },
+            ]}
+          />
         </section>
-        <section className="why-choose-section w-full flex justify-center bg-light-blue gap-x-40 py-43 relative rounded-t-[40px]">
-          <div className="max-w-[492px] mt-32 z-15">
+        <section className="why-choose-section w-full flex flex-col px-12 py-20 justify-center bg-light-blue gap-y-15 md:gap-x-40 relative rounded-t-[40px] md:flex-row md:py-43">
+          <div className="max-w-[492px] md:mt-32 z-15">
             <img
               src={whyChoose.src}
               alt="Person reviewing charts on tablet and laptop"
@@ -129,19 +137,22 @@ export default function Index({ globalData }) {
               matters.
             </p>
             <Link href="/about">
-              <Button variant={ButtonVariant.Primary} className="mt-18">
+              <Button
+                variant={ButtonVariant.Primary}
+                className="mt-18 mx-autom md:mx-0"
+              >
                 About Us
               </Button>
             </Link>
           </div>
           <CompassQuarter
-            className="absolute top-[-235px] left-[10%] z-10 w-[712px]"
+            className="absolute z-10 w-[408px] -inset-y-62 -inset-x-10 md:top-[-235px] md:left-[10%] md:w-[712px]"
             fill="white"
           />
           <CornerCut />
         </section>
         <section className="credentials-section flex flex-col items-center justify-center w-full pt-18 pb-32 z-25 relative">
-          <h2 className="text-2xl font-bold text-center mb-20 max-w-lg">
+          <h2 className="text-[35px] md:text-2xl font-bold text-center mb-20 max-w-lg">
             Credentials and Memberships
           </h2>
           <Credentials />

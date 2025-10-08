@@ -1,6 +1,8 @@
+import Accordion from './accordion.svg';
 import Bank from './bank.svg';
 import Calculator from './calculator.svg';
 import Clarity from './clarity.svg';
+import Close from './close.svg';
 import Collaborative from './collaborative.svg';
 import Gavel from './gavel.svg';
 import Handshake from './handshake.svg';
@@ -12,8 +14,10 @@ import Shield from './shield.svg';
 import Vision from './vision.svg';
 
 export enum IconName {
+  Accordion = 'accordion',
   Bank = 'bank',
   Calculator = 'calculator',
+  Close = 'close',
   Collaborative = 'collaborative',
   Clarity = 'clarity',
   Gavel = 'gavel',
@@ -34,12 +38,16 @@ export interface IconProps extends React.SVGAttributes<SVGElement> {
 
 const IconSwitch = (props: IconProps) => {
   switch (props.name) {
+    case IconName.Accordion:
+      return <Accordion {...props} />;
     case IconName.Bank:
       return <Bank {...props} />;
     case IconName.Calculator:
       return <Calculator {...props} />;
     case IconName.Clarity:
       return <Clarity {...props} />;
+    case IconName.Close:
+      return <Close {...props} />;
     case IconName.Collaborative:
       return <Collaborative {...props} />;
     case IconName.Gavel:

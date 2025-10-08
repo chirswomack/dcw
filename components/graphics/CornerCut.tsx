@@ -10,6 +10,7 @@ export enum CornerCutVariant {
 export interface CornerCutProps {
   variant?: CornerCutVariant;
   fill?: string;
+  className?: string;
 }
 
 const variantToClassMap: Record<CornerCutVariant, string> = {
@@ -22,10 +23,11 @@ const variantToClassMap: Record<CornerCutVariant, string> = {
 export default function CornerCut({
   variant = CornerCutVariant.BottomLeft,
   fill = 'fill-white',
+  className = '',
 }: CornerCutProps) {
   return (
     <Graphic
-      className={`absolute w-[252px] z-10 ${variantToClassMap[variant]} ${fill}`}
+      className={`absolute w-[90px] md:w-[252px] z-10 ${variantToClassMap[variant]} ${fill} ${className}`}
     />
   );
 }

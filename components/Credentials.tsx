@@ -8,7 +8,7 @@ import FICPA from '../components/graphics/ficpa.svg';
 
 export default function Credentials() {
   return (
-    <div className="flex max-w-7xl justify-center gap-x-16 h-[150px]">
+    <div className="flex flex-row-wrap md:flex-row md:max-w-7xl justify-center md:gap-x-16 md:h-[150px]">
       <CFE />
       <ABV />
       <FACP />

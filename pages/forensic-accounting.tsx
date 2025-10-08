@@ -26,16 +26,15 @@ export default function ForensicAccounting() {
     <Layout>
       <Navbar activeRoute="/forensic-accounting" />
       <div className="flex flex-col w-screen">
-        <Hero src={hero.src}>
-          <h1 className="text-[55px] leading-[.953] font-bold text-white">
+        <Hero src={hero.src} backgroundPositionX="65%">
+          <h1 className="text-[35px] md:text-[55px] leading-[.953] font-bold text-white">
             Forensic
             <br />
             Accounting
           </h1>
-          <p className="mt-8 text-[25px] font-bold leading-[1.103] text-brand-green">
+          <p className="mt-5 md:mt-8 md:text-[25px] w-[150%] font-bold leading-[1.103] text-brand-green">
             Precision and clarity in
-            <br />
-            financial investigations
+            <br /> financial investigations
             <br /> or financial conflict
           </p>
         </Hero>

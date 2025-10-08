@@ -40,13 +40,13 @@ export default function CollaborativeDivorce() {
     <Layout>
       <Navbar activeRoute="/collaborative-divorce" />
       <div className="flex flex-col w-screen">
-        <Hero src={hero.src}>
-          <h1 className="text-[55px] leading-[.953] font-bold text-white">
+        <Hero src={hero.src} backgroundPositionX="60%">
+          <h1 className="text-[30px] md:text-[55px] leading-[.953] font-bold text-white">
             Collaborative
             <br />
             Divorce
           </h1>
-          <p className="mt-8 text-[25px] font-bold leading-[1.103] text-brand-green shrink">
+          <p className="mt-5 md:mt-8 md:text-[25px] w-[150%] font-bold leading-[1.103] text-brand-green shrink">
             Equitable, compassionate, <br />
             and objective <br />
             financial solutions
