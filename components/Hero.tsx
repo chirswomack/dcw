@@ -33,7 +33,7 @@ export default function Hero({
           {children}
         </div>
         <BlurbArrow
-          className={`-z-1 absolute top-0 inset-full h-full ${blurbArrowColorToClassMap[blurbBg]}`}
+          className={`-z-1 absolute top-0 inset-full -translate-x-px h-full ${blurbArrowColorToClassMap[blurbBg]}`}
         />
       </div>
     </div>

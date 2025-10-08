@@ -11,7 +11,7 @@ export function ServicesListSection({
   listItems,
 }: ServiceListSectionProps) {
   return (
-    <section className="bg-light-blue text-white pt-26 pb-32 px-8 relative rounded-t-[40px]">
+    <section className="bg-light-blue text-white pt-26 pb-32 px-8 relative rounded-t-2xl md:rounded-t-[40px]">
       <div className="text-white max-w-xl mx-auto text-center z-10 relative">
         <h3 className="text-[35px] md:text-[40px] font-bold leading-[1.13] mb-13">
           {headerText}

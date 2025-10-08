@@ -41,7 +41,7 @@ export default function Navbar({ activeRoute }: NavbarProps) {
       : ButtonVariant.Primary;
 
   return (
-    <nav className="top-0 left-0 sticky w-screen flex items-center justify-between p-4 bg-brand-blue text-white z-100">
+    <nav className="top-0 left-0 fixed md:sticky w-screen flex items-center justify-between p-4 bg-brand-blue text-white z-100">
       <div className="flex flex-col items-start w-full lg:flex-row lg:items-center lg:max-w-screen lg:mx-auto 2xl:max-w-7xl">
         <div className="flex flex-row items-center justify-between w-full lg:w-auto">
           <Link href="/" className="lg:mr-20 2xl:mr-72">

@@ -104,7 +104,7 @@ export default function About() {
           <CornerCut fill="fill-[#0155AE]" />
         </section>
         <section
-          className="bg-[#0155AE] py-22 bg-no-repeat bg-size-[85%]"
+          className="bg-[#0155AE] py-22 bg-no-repeat bg-size-[85%] md:bg-size-[initial]"
           style={{
             backgroundImage: `url(${staircase.src})`,
             backgroundPosition: '75% 100%',

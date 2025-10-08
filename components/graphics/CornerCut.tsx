@@ -14,10 +14,11 @@ export interface CornerCutProps {
 }
 
 const variantToClassMap: Record<CornerCutVariant, string> = {
-  [CornerCutVariant.TopRight]: 'top-0 right-0 -scale-x-100 -scale-y-100',
-  [CornerCutVariant.BottomRight]: 'bottom-0 right-0 -scale-x-100',
-  [CornerCutVariant.TopLeft]: 'top-0 left-0 -scale-y-100',
-  [CornerCutVariant.BottomLeft]: 'bottom-0 left-0',
+  [CornerCutVariant.TopRight]:
+    '-top-px md:top-0 right-0 -scale-x-100 -scale-y-100',
+  [CornerCutVariant.BottomRight]: '-bottom-px md:bottom-0 right-0 -scale-x-100',
+  [CornerCutVariant.TopLeft]: '-top-px md:top-0 left-0 -scale-y-100',
+  [CornerCutVariant.BottomLeft]: '-bottom-px md:bottom-0 left-0',
 };
 
 export default function CornerCut({
