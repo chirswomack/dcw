@@ -10,22 +10,19 @@
   --color-gradient-4: var(--theme-gradient-4);
   --font-primary: var(--theme-headings);
   --font-secondary: var(--theme-body);
-}
 
-@custom-variant dark (&:where(.dark, .dark *));
-
-@layer base {
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    font-family: var(--font-primary);
-  }
-
-  body {
-    font-family: var(--font-secondary);
-  }
+  --container-7xl: 1400px;
+  --text-xs: 12px;
+  --text-sm: 14px;
+  --text-base: 18px;
+  --text-base--line-height: 1.42;
+  --text-md: 25px;
+  --text-lg: 30px;
+  --text-lg--line-height: 1.09;
+  --text-xl: 40px;
+  --text-xl--line-height: 1.13;
+  --text-2xl: 50px;
+  --text-2xl--line-height: 1.13;
+  --text-3xl: 55px;
+  --text-3xl--line-height: 1.033;
 }
