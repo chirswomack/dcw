@@ -5,28 +5,12 @@ import Navbar from 'components/Navbar';
 
 import hero from '../public/images/contact-hero.png';
 import CornerCut from 'components/graphics/CornerCut';
-import Button, { ButtonVariant } from 'components/Button';
 import Compass from 'components/graphics/compass.svg';
 import CompassQuarter from 'components/graphics/compass-quarter.svg';
 import CompassNeedle from 'components/graphics/compass-needle.svg';
+import ContactForm from 'components/ContactForm';
 
 export default function Contact() {
-  const handleFormSubmit = async (event: React.FormEvent) => {
-    event.preventDefault();
-    try {
-      const formData = new FormData(event.target as any);
-      await fetch('/__forms.html', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams(formData as any).toString(),
-      });
-      console.log('Form submitted successfully');
-    } catch (error) {
-      console.error('Error submitting form:', error);
-      // Handle error (e.g., show a message to the user)
-    }
-  };
-
   return (
     <Layout>
       <Navbar activeRoute="/contact" />
@@ -48,43 +32,7 @@ export default function Contact() {
               Please fill out the form below, and we&#39;ll be in touch as soon
               as possible. We look forward to assisting you.
             </p>
-            <form
-              className="flex flex-col gap-y-8 md:max-w-4xl"
-              name="contact"
-              data-netlify="true"
-              onSubmit={handleFormSubmit}
-            >
-              <input
-                type="text"
-                name="name"
-                className="bg-white placeholder:uppercase placeholder:text-[#a9a9a9] pl-8 py-4 rounded-[10px]"
-                placeholder="Full name"
-              />
-              <input
-                type="phone"
-                name="phone-number"
-                className="bg-white placeholder:uppercase placeholder:text-[#a9a9a9] pl-8 py-4 rounded-[10px]"
-                placeholder="Phone number"
-              />
-              <input
-                type="email"
-                name="email"
-                className="bg-white placeholder:uppercase placeholder:text-[#a9a9a9] pl-8 py-4 rounded-[10px]"
-                placeholder="Email"
-              />
-              <textarea
-                name="message"
-                className="bg-white placeholder:uppercase placeholder:text-[#a9a9a9] pl-8 py-4 rounded-[10px] h-[250px] resize-none"
-                placeholder="Message"
-              />
-              <Button
-                variant={ButtonVariant.Primary}
-                className="self-end"
-                submit
-              >
-                Submit
-              </Button>
-            </form>
+            <ContactForm />
             <CompassNeedle className="absolute top-0 left-0 -z-1 h-30 -translate-x-4 translate-y-7 md:-translate-x-16 md:translate-y-20 md:h-[250px] fill-brand-green" />
             <CompassQuarter className="absolute bottom-0 right-0 -z-1 h-53 -rotate-90 -translate-x-3 translate-y-2/9 md:translate-x-22 md:translate-y-1/5 md:h-[688px] fill-brand-green" />
             <CornerCut />
