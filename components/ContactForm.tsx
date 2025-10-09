@@ -2,7 +2,11 @@
 
 import Button, { ButtonVariant } from './Button';
 
-export default function ContactForm() {
+export interface ContactFormProps {
+  onSubmit: () => void;
+}
+
+export default function ContactForm({ onSubmit }: ContactFormProps) {
   const handleFormSubmit = async (event) => {
     event.preventDefault();
     const formData = new FormData(event.target);
@@ -15,6 +19,7 @@ export default function ContactForm() {
         console.log('Network response was not ok');
       } else {
         console.log('Form submitted successfully');
+        onSubmit();
       }
     });
   };
@@ -32,6 +37,7 @@ export default function ContactForm() {
         name="name"
         className="bg-white placeholder:uppercase placeholder:text-[#a9a9a9] pl-8 py-4 rounded-[10px]"
         placeholder="Full name"
+        required
       />
       <input
         type="phone"
@@ -44,11 +50,13 @@ export default function ContactForm() {
         name="email"
         className="bg-white placeholder:uppercase placeholder:text-[#a9a9a9] pl-8 py-4 rounded-[10px]"
         placeholder="Email"
+        required
       />
       <textarea
         name="message"
         className="bg-white placeholder:uppercase placeholder:text-[#a9a9a9] pl-8 py-4 rounded-[10px] h-[250px] resize-none"
         placeholder="Message"
+        required
       />
       <Button variant={ButtonVariant.Primary} className="self-end" submit>
         Submit
