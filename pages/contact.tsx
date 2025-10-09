@@ -32,23 +32,32 @@ export default function Contact() {
               Please fill out the form below, and we&#39;ll be in touch as soon
               as possible. We look forward to assisting you.
             </p>
-            <form className="flex flex-col gap-y-8 md:max-w-4xl">
+            <form
+              className="flex flex-col gap-y-8 md:max-w-4xl"
+              name="contact"
+              method="POST"
+              data-netlify="true"
+            >
               <input
                 type="text"
+                name="full-name"
                 className="bg-white placeholder:uppercase placeholder:text-[#a9a9a9] pl-8 py-4 rounded-[10px]"
                 placeholder="Full name"
               />
               <input
                 type="phone"
+                name="phone-number"
                 className="bg-white placeholder:uppercase placeholder:text-[#a9a9a9] pl-8 py-4 rounded-[10px]"
                 placeholder="Phone number"
               />
               <input
                 type="email"
+                name="email"
                 className="bg-white placeholder:uppercase placeholder:text-[#a9a9a9] pl-8 py-4 rounded-[10px]"
                 placeholder="Email"
               />
               <textarea
+                name="message"
                 className="bg-white uppercase placeholder:text-[#a9a9a9] pl-8 py-4 rounded-[10px] h-[250px] resize-none"
                 placeholder="Message"
               />

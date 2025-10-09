@@ -10,6 +10,7 @@ export interface ButtonProps {
   onClick?: () => void;
   className?: string;
   children: React.ReactNode;
+  submit?: boolean;
 }
 
 const baseStyles =
@@ -34,6 +35,7 @@ export default function Button({
   onClick,
   className,
   children,
+  submit = false,
 }: ButtonProps) {
   return (
     <button
@@ -41,6 +43,7 @@ export default function Button({
         className || ''
       }`}
       onClick={onClick}
+      type={submit ? 'submit' : 'button'}
     >
       {children}
     </button>

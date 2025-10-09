@@ -108,7 +108,7 @@ export default function Index({ globalData }) {
             ]}
           />
         </section>
-        <section className="why-choose-section w-full flex flex-col px-12 py-20 justify-center bg-light-blue gap-y-15 md:gap-x-40 relative rounded-t-[40px] md:flex-row md:py-43">
+        <section className="why-choose-section w-full flex flex-col px-12 py-20 justify-center bg-light-blue gap-y-15 md:gap-x-40 relative rounded-t-2xl md:rounded-t-[40px] md:flex-row md:py-43">
           <div className="max-w-[492px] md:mt-32 z-15">
             <img
               src={whyChoose.src}
