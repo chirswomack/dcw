@@ -12,7 +12,7 @@ export default function ContactForm() {
       body: new URLSearchParams(formData as any).toString(),
     }).then((response) => {
       if (!response.ok) {
-        throw new Error('Network response was not ok');
+        console.log('Network response was not ok');
       } else {
         console.log('Form submitted successfully');
       }
@@ -26,6 +26,7 @@ export default function ContactForm() {
       data-netlify="true"
       onSubmit={handleFormSubmit}
     >
+      <input type="hidden" name="form-name" value="contact" />
       <input
         type="text"
         name="name"
