@@ -11,6 +11,22 @@ import CompassQuarter from 'components/graphics/compass-quarter.svg';
 import CompassNeedle from 'components/graphics/compass-needle.svg';
 
 export default function Contact() {
+  const handleFormSubmit = async (event: React.FormEvent) => {
+    event.preventDefault();
+    try {
+      const formData = new FormData(event.target as any);
+      await fetch('/__forms.html', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(formData as any).toString(),
+      });
+      console.log('Form submitted successfully');
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      // Handle error (e.g., show a message to the user)
+    }
+  };
+
   return (
     <Layout>
       <Navbar activeRoute="/contact" />
@@ -40,7 +56,7 @@ export default function Contact() {
             >
               <input
                 type="text"
-                name="full-name"
+                name="name"
                 className="bg-white placeholder:uppercase placeholder:text-[#a9a9a9] pl-8 py-4 rounded-[10px]"
                 placeholder="Full name"
               />
