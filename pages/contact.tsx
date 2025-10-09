@@ -51,8 +51,8 @@ export default function Contact() {
             <form
               className="flex flex-col gap-y-8 md:max-w-4xl"
               name="contact"
-              method="POST"
               data-netlify="true"
+              onSubmit={handleFormSubmit}
             >
               <input
                 type="text"
@@ -74,10 +74,14 @@ export default function Contact() {
               />
               <textarea
                 name="message"
-                className="bg-white uppercase placeholder:text-[#a9a9a9] pl-8 py-4 rounded-[10px] h-[250px] resize-none"
+                className="bg-white placeholder:uppercase placeholder:text-[#a9a9a9] pl-8 py-4 rounded-[10px] h-[250px] resize-none"
                 placeholder="Message"
               />
-              <Button variant={ButtonVariant.Primary} className="self-end">
+              <Button
+                variant={ButtonVariant.Primary}
+                className="self-end"
+                submit
+              >
                 Submit
               </Button>
             </form>
