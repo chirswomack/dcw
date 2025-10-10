@@ -30,12 +30,12 @@ export default function BusinessValuation() {
       <Navbar activeRoute="/business-valuation" />
       <div className="flex flex-col w-screen">
         <Hero src={hero.src} backgroundPositionX="65%">
-          <h1 className="text-[35px] md:text-[55px] leading-[.953] font-bold text-white">
+          <h1 className="text-[35px] lg:text-[55px] leading-[.953] font-bold text-white">
             Business
             <br />
             Valuation
           </h1>
-          <p className="mt-5 font-bold w-[150%] leading-[1.103] text-brand-green shrink md:mt-8 md:text-[25px]">
+          <p className="mt-5 font-bold w-[150%] leading-[1.103] text-brand-green shrink lg:mt-8 lg:text-[25px]">
             Accurate, defensible
             <br /> business valuations
           </p>

@@ -15,10 +15,10 @@ export interface CornerCutProps {
 
 const variantToClassMap: Record<CornerCutVariant, string> = {
   [CornerCutVariant.TopRight]:
-    '-top-px md:top-0 right-0 -scale-x-100 -scale-y-100',
-  [CornerCutVariant.BottomRight]: '-bottom-px md:bottom-0 right-0 -scale-x-100',
-  [CornerCutVariant.TopLeft]: '-top-px md:top-0 left-0 -scale-y-100',
-  [CornerCutVariant.BottomLeft]: '-bottom-px md:bottom-0 left-0',
+    '-top-px lg:top-0 right-0 -scale-x-100 -scale-y-100',
+  [CornerCutVariant.BottomRight]: '-bottom-px lg:bottom-0 right-0 -scale-x-100',
+  [CornerCutVariant.TopLeft]: '-top-px lg:top-0 left-0 -scale-y-100',
+  [CornerCutVariant.BottomLeft]: '-bottom-px lg:bottom-0 left-0',
 };
 
 export default function CornerCut({
@@ -28,7 +28,7 @@ export default function CornerCut({
 }: CornerCutProps) {
   return (
     <Graphic
-      className={`absolute w-[90px] md:w-[252px] z-10 ${variantToClassMap[variant]} ${fill} ${className}`}
+      className={`absolute w-[90px] lg:w-[252px] z-10 ${variantToClassMap[variant]} ${fill} ${className}`}
     />
   );
 }

@@ -14,9 +14,9 @@ export function IconList({ listItems, className }: IconListProps) {
   return (
     <div
       className={classNames(
-        'grid grid-flow-col gap-y-15 md:gap-x-25 px-13 grid-rows-3',
-        'md:grid-flow-row md:grid-rows-1 md:items-stretch md:grid-cols-3 ',
-        fourCols && 'grid-rows-4 md:grid-cols-4! ',
+        'grid grid-flow-col gap-y-15 lg:gap-x-25 px-13 grid-rows-3',
+        'lg:grid-flow-row lg:grid-rows-1 lg:items-stretch lg:grid-cols-3 ',
+        fourCols && 'grid-rows-4 lg:grid-cols-4! ',
         fourCols ? 'max-w-7xl' : 'max-w-6xl',
         className
       )}
@@ -54,9 +54,9 @@ export function IconListItem({
         </div>
       )}
       {title && <h5 className="font-bold mt-10 uppercase">{title}</h5>}
-      <p className="font-medium mt-5">{description}</p>
+      <p className="font-medium mt-5 md:max-w-lg">{description}</p>
       {href && (
-        <div className="mt-10 md:flex-grow flex items-end">
+        <div className="mt-10 lg:flex-grow flex items-end">
           <Button variant={ButtonVariant.Secondary}>
             <Link href={href}>Learn More</Link>
           </Button>
