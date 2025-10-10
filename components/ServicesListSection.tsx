@@ -11,12 +11,12 @@ export function ServicesListSection({
   listItems,
 }: ServiceListSectionProps) {
   return (
-    <section className="bg-light-blue text-white pt-26 pb-32 px-8 relative rounded-t-2xl md:rounded-t-[40px]">
+    <section className="bg-light-blue text-white pt-26 pb-32 px-8 relative rounded-t-2xl lg:rounded-t-[40px]">
       <div className="text-white max-w-xl mx-auto text-center z-10 relative">
-        <h3 className="text-[35px] md:text-[40px] font-bold leading-[1.13] mb-13">
+        <h3 className="text-[35px] lg:text-[40px] font-bold leading-[1.13] mb-13">
           {headerText}
         </h3>
-        <div className="flex flex-col gap-y-4 text-[16px] md:text-base">
+        <div className="flex flex-col gap-y-4 text-[16px] lg:text-base">
           {listItems &&
             listItems.map((item, index) => (
               <ServiceListItem
@@ -27,7 +27,7 @@ export function ServicesListSection({
             ))}
         </div>
       </div>
-      <Compass className="absolute inset-1/2 -translate-x-1/2 -translate-y-1/4 w-[90%] md:-translate-y-1/2 md:w-auto md:h-[80%] z-1 fill-[#0058B8]" />
+      <Compass className="absolute inset-1/2 -translate-x-1/2 -translate-y-1/4 w-[90%] md:-translate-y-1/2 lg:w-auto md:h-[80%] z-1 fill-[#0058B8]" />
       <CornerCut />
     </section>
   );
@@ -47,7 +47,7 @@ export function ServiceListItem({ title, description }: ServiceListItemProps) {
     >
       <p className="font-bold uppercase">{title}</p>
       {description && (
-        <p className="mt-2 mb-3 font-medium md:px-20">{description}</p>
+        <p className="mt-2 mb-3 font-medium lg:px-20">{description}</p>
       )}
     </div>
   );

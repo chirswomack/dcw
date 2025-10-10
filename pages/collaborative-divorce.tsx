@@ -41,12 +41,12 @@ export default function CollaborativeDivorce() {
       <Navbar activeRoute="/collaborative-divorce" />
       <div className="flex flex-col w-screen">
         <Hero src={hero.src} backgroundPositionX="60%">
-          <h1 className="text-[30px] md:text-[55px] leading-[.953] font-bold text-white">
+          <h1 className="text-[30px] lg:text-[55px] leading-[.953] font-bold text-white">
             Collaborative
             <br />
             Divorce
           </h1>
-          <p className="mt-5 md:mt-8 md:text-[25px] w-[150%] font-bold leading-[1.103] text-brand-green shrink">
+          <p className="mt-5 lg:mt-8 lg:text-[25px] w-[150%] font-bold leading-[1.103] text-brand-green shrink">
             Equitable, compassionate, <br />
             and objective <br />
             financial solutions
@@ -78,8 +78,8 @@ export default function CollaborativeDivorce() {
           secondaryText="Let DCW Advisory Group assist you."
           buttonText="Explore our Collaborative Solutions"
         />
-        <Footer />
       </div>
+      <Footer />
     </Layout>
   );
 }

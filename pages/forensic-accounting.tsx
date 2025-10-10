@@ -27,12 +27,12 @@ export default function ForensicAccounting() {
       <Navbar activeRoute="/forensic-accounting" />
       <div className="flex flex-col w-screen">
         <Hero src={hero.src} backgroundPositionX="65%">
-          <h1 className="text-[35px] md:text-[55px] leading-[.953] font-bold text-white">
+          <h1 className="text-[35px] lg:text-[55px] leading-[.953] font-bold text-white">
             Forensic
             <br />
             Accounting
           </h1>
-          <p className="mt-5 md:mt-8 md:text-[25px] w-[150%] font-bold leading-[1.103] text-brand-green">
+          <p className="mt-5 lg:mt-8 lg:text-[25px] w-[150%] font-bold leading-[1.103] text-brand-green">
             Precision and clarity in
             <br /> financial investigations
             <br /> or financial conflict
@@ -60,8 +60,8 @@ export default function ForensicAccounting() {
           secondaryText="Gain clarity and confidence with DCW Advisory Group."
           buttonText="Schedule a forensic accounting consultation"
         />
-        <Footer />
       </div>
+      <Footer />
     </Layout>
   );
 }

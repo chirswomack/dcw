@@ -26,7 +26,7 @@ export default function ContactForm({ onSubmit }: ContactFormProps) {
 
   return (
     <form
-      className="flex flex-col gap-y-8 md:max-w-4xl"
+      className="flex flex-col gap-y-8 lg:max-w-4xl"
       name="contact"
       data-netlify="true"
       onSubmit={handleFormSubmit}

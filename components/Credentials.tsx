@@ -10,7 +10,7 @@ import FICPA from '../components/graphics/ficpa.svg?url';
 
 export default function Credentials() {
   return (
-    <div className="flex flex-wrap md:flex-nowrap gap-y-5 md:max-w-7xl justify-center md:gap-x-16 md:h-[150px] *:scale-80 md:*:scale-none">
+    <div className="flex flex-wrap lg:flex-nowrap gap-y-5 lg:max-w-7xl justify-center lg:gap-x-16 lg:h-[150px] *:scale-80 lg:*:scale-none">
       <Image src={CFE.src} alt="CFE logo" width={173} height={94} />
       <Image src={ABV.src} alt="ABV logo" width={131} height={89} />
       <Image src={FACP.src} alt="FACP logo" width={116} height={116} />

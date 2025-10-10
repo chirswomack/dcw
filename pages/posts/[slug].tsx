@@ -45,10 +45,10 @@ export default function PostPage({
         description={frontMatter.description}
       />
       <PostHeader name={globalData.name} />
-      <article className="px-6 md:px-0" data-sb-object-id={`posts/${slug}.mdx`}>
+      <article className="px-6 lg:px-0" data-sb-object-id={`posts/${slug}.mdx`}>
         <header>
           <h1
-            className="mb-12 text-3xl text-center md:text-5xl dark:text-white"
+            className="mb-12 text-3xl text-center lg:text-5xl dark:text-white"
             data-sb-field-path="title"
           >
             {frontMatter.title}
@@ -67,11 +67,11 @@ export default function PostPage({
             <MDXRemote {...source} components={components} />
           </article>
         </main>
-        <div className="grid mt-12 md:grid-cols-2 lg:-mx-24">
+        <div className="grid mt-12 lg:grid-cols-2 lg:-mx-24">
           {prevPost && (
             <Link
               href={`/posts/${prevPost.slug}`}
-              className="flex flex-col px-10 py-8 text-center transition border border-gray-800/10 bg-white/10 md:text-right first:rounded-t-lg md:first:rounded-tr-none md:first:rounded-l-lg last:rounded-r-lg last:rounded-b-lg backdrop-blur-lg dark:bg-black/30 hover:bg-white/20 dark:hover:bg-black/50 dark:border-white/10 last:border-t md:border-r-0 md:last:border-r md:last:rounded-r-none"
+              className="flex flex-col px-10 py-8 text-center transition border border-gray-800/10 bg-white/10 lg:text-right first:rounded-t-lg lg:first:rounded-tr-none lg:first:rounded-l-lg last:rounded-r-lg last:rounded-b-lg backdrop-blur-lg dark:bg-black/30 hover:bg-white/20 dark:hover:bg-black/50 dark:border-white/10 last:border-t lg:border-r-0 lg:last:border-r lg:last:rounded-r-none"
             >
               <p className="mb-4 text-gray-500 uppercase dark:text-white dark:opacity-60">
                 Previous
@@ -79,13 +79,13 @@ export default function PostPage({
               <h4 className="mb-6 text-2xl text-gray-700 dark:text-white">
                 {prevPost.title}
               </h4>
-              <ArrowIcon className="mx-auto mt-auto transform rotate-180 md:mr-0" />
+              <ArrowIcon className="mx-auto mt-auto transform rotate-180 lg:mr-0" />
             </Link>
           )}
           {nextPost && (
             <Link
               href={`/posts/${nextPost.slug}`}
-              className="flex flex-col px-10 py-8 text-center transition border border-t-0 border-b-0 border-gray-800/10 bg-white/10 md:text-left md:first:rounded-t-lg last:rounded-b-lg first:rounded-l-lg md:last:rounded-bl-none md:last:rounded-r-lg backdrop-blur-lg dark:bg-black/30 hover:bg-white/20 dark:hover:bg-black/50 dark:border-white/10 first:border-t first:rounded-t-lg md:border-t last:border-b"
+              className="flex flex-col px-10 py-8 text-center transition border border-t-0 border-b-0 border-gray-800/10 bg-white/10 lg:text-left lg:first:rounded-t-lg last:rounded-b-lg first:rounded-l-lg lg:last:rounded-bl-none lg:last:rounded-r-lg backdrop-blur-lg dark:bg-black/30 hover:bg-white/20 dark:hover:bg-black/50 dark:border-white/10 first:border-t first:rounded-t-lg lg:border-t last:border-b"
             >
               <p className="mb-4 text-gray-500 uppercase dark:text-white dark:opacity-60">
                 Next
@@ -93,7 +93,7 @@ export default function PostPage({
               <h4 className="mb-6 text-2xl text-gray-700 dark:text-white">
                 {nextPost.title}
               </h4>
-              <ArrowIcon className="mx-auto mt-auto md:ml-0" />
+              <ArrowIcon className="mx-auto mt-auto lg:ml-0" />
             </Link>
           )}
         </div>

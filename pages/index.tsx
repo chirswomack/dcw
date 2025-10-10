@@ -31,7 +31,7 @@ export default function Index({ globalData }) {
       <Navbar />
       <div className="flex flex-col w-screen">
         <Hero src={hero.src} blurbBg="brand-green" backgroundPositionX="88%">
-          <p className="text-[35px] md:text-3xl font-bold w-[125%]">
+          <p className="text-[35px] lg:text-3xl font-bold w-[125%]">
             <span className="text-white">
               Bringing
               <br />
@@ -44,9 +44,9 @@ export default function Index({ globalData }) {
             disputes
           </p>
         </Hero>
-        <section className="first-section flex flex-col items-center justify-center w-full relative bg-brand-blue pt-50 pb-22 md:pt-20 md:pb-40">
-          <div className="flex flex-col px-13 gap-y-15 md:gap-y-0 md:flex-row md:mx-auto md:gap-x-40 justify-center">
-            <div className="w-full md:w-1/4 md:mt-32">
+        <section className="first-section flex flex-col items-center justify-center w-full relative bg-brand-blue pt-50 pb-22 lg:pt-20 lg:pb-40">
+          <div className="flex flex-col px-13 gap-y-15 lg:gap-y-0 lg:flex-row lg:mx-auto lg:gap-x-40 justify-center">
+            <div className="w-full lg:w-1/4 lg:mt-32">
               <p className="text-white mb-8">
                 At DCW Advisory Group, we simplify financial challenges through
                 precise analysis, expert insights, and tailored solutions. From
@@ -60,14 +60,14 @@ export default function Index({ globalData }) {
                 </Button>
               </Link>
             </div>
-            <div className="w-full md:w-1/4">
+            <div className="w-full flex flex-col items-center lg:w-1/4">
               <img src={chart.src} alt="Bar chart with increasing arrow" />
             </div>
           </div>
           <CornerCut variant={CornerCutVariant.BottomRight} />
         </section>
         <section className="services-section flex flex-col items-center justify-center w-full pt-18 pb-32 z-25 relative">
-          <h2 className="text-[35px] md:text-[50px] font-bold text-center mb-5">
+          <h2 className="text-[35px] lg:text-[50px] font-bold text-center mb-5">
             Our Services
           </h2>
           <p className="text-center max-w-xl">
@@ -108,8 +108,8 @@ export default function Index({ globalData }) {
             ]}
           />
         </section>
-        <section className="why-choose-section w-full flex flex-col px-12 py-20 justify-center bg-light-blue gap-y-15 md:gap-x-40 relative rounded-t-2xl md:rounded-t-[40px] md:flex-row md:py-43">
-          <div className="max-w-[492px] md:mt-32 z-15">
+        <section className="why-choose-section w-full flex flex-col px-12 py-20 items-center lg:items-start justify-center bg-light-blue gap-y-15 lg:gap-x-40 relative rounded-t-2xl lg:rounded-t-[40px] lg:flex-row lg:py-43">
+          <div className="max-w-[492px] lg:mt-32 z-15">
             <img
               src={whyChoose.src}
               alt="Person reviewing charts on tablet and laptop"
@@ -139,20 +139,20 @@ export default function Index({ globalData }) {
             <Link href="/about">
               <Button
                 variant={ButtonVariant.Primary}
-                className="mt-18 mx-autom md:mx-0"
+                className="mt-18 mx-autom lg:mx-0"
               >
                 About Us
               </Button>
             </Link>
           </div>
           <CompassQuarter
-            className="absolute z-10 w-[408px] -inset-y-62 -inset-x-10 md:top-[-235px] md:left-[10%] md:w-[712px]"
+            className="absolute z-10 w-[408px] md:max-w-[40%] md:w-[500px] -inset-y-62 -inset-x-10 lg:top-[-235px] md:left-[10%] lg:w-[712px]"
             fill="white"
           />
           <CornerCut />
         </section>
         <section className="credentials-section flex flex-col items-center justify-center w-full pt-18 pb-32 z-25 relative">
-          <h2 className="text-[35px] md:text-2xl font-bold text-center mb-20 max-w-lg">
+          <h2 className="text-[35px] lg:text-2xl font-bold text-center mb-20 max-w-lg">
             Credentials and Memberships
           </h2>
           <Credentials />
@@ -167,8 +167,8 @@ export default function Index({ globalData }) {
         >
           <CornerCut variant={CornerCutVariant.TopRight} />
         </CtaSection>
-        <Footer />
       </div>
+      <Footer />
     </Layout>
   );
 }
