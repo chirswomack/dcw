@@ -146,7 +146,7 @@ export default function Index({ globalData }) {
             </Link>
           </div>
           <CompassQuarter
-            className="absolute z-10 w-[408px] md:-[500px] -inset-y-62 -inset-x-10 lg:top-[-235px] md:left-[10%] lg:w-[712px]"
+            className="absolute z-10 w-[408px] md:max-w-[40%] md:w-[500px] -inset-y-62 -inset-x-10 lg:top-[-235px] md:left-[10%] lg:w-[712px]"
             fill="white"
           />
           <CornerCut />
