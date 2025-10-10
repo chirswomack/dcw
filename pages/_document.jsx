@@ -4,7 +4,7 @@ import Document, { Html, Head, Main, NextScript } from 'next/document';
 class MyDocument extends Document {
   render() {
     return (
-      <Html lang="en" className="theme-compiled">
+      <Html lang="en" className="h-dvh">
         <Head>
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link
@@ -18,7 +18,7 @@ class MyDocument extends Document {
           />
         </Head>
         <body
-          className={`w-screen antialiased font-sans text-base text-brand-blue leading-(--text-base--line-height) font-medium bg-white overflow-x-hidden`}
+          className={`w-screen h-dvh antialiased font-sans text-base text-brand-blue leading-(--text-base--line-height) font-medium bg-white overflow-x-hidden`}
         >
           <Main />
           <NextScript />
