@@ -78,8 +78,8 @@ export default function CollaborativeDivorce() {
           secondaryText="Let DCW Advisory Group assist you."
           buttonText="Explore our Collaborative Solutions"
         />
-        <Footer />
       </div>
+      <Footer />
     </Layout>
   );
 }

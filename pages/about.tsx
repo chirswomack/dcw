@@ -251,8 +251,8 @@ export default function About() {
         >
           <CornerCut variant={CornerCutVariant.TopLeft} />
         </CtaSection>
-        <Footer />
       </div>
+      <Footer />
     </Layout>
   );
 }

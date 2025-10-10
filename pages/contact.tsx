@@ -58,8 +58,8 @@ export default function Contact() {
             <CornerCut />
           </div>
         </section>
-        <Footer />
       </div>
+      <Footer />
     </Layout>
   );
 }

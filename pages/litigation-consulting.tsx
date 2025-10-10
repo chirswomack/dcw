@@ -82,8 +82,8 @@ export default function LitigationConsulting() {
           secondaryText="Gain clarity and confidence with DCW Advisory Group."
           buttonText="Discuss your Litigation Needs"
         />
-        <Footer />
       </div>
+      <Footer />
     </Layout>
   );
 }

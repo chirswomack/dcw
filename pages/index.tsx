@@ -167,8 +167,8 @@ export default function Index({ globalData }) {
         >
           <CornerCut variant={CornerCutVariant.TopRight} />
         </CtaSection>
-        <Footer />
       </div>
+      <Footer />
     </Layout>
   );
 }

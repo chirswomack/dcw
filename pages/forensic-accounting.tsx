@@ -60,8 +60,8 @@ export default function ForensicAccounting() {
           secondaryText="Gain clarity and confidence with DCW Advisory Group."
           buttonText="Schedule a forensic accounting consultation"
         />
-        <Footer />
       </div>
+      <Footer />
     </Layout>
   );
 }
