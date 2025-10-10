@@ -10,7 +10,7 @@ export interface FooterProps {
 
 export default function Footer({ className }: FooterProps) {
   return (
-    <footer className="w-full py-11 md:h-39 bg-light-blue text-white absolute bottom-0 after:absolute after:bottom-[-20px] after:left-0 after:right-0 after:bg-light-blue after:h-5">
+    <footer className="w-full py-11 md:h-39 bg-light-blue text-white absolute bottom-0">
       <div className="max-w-7xl mx-auto gap-y-10 flex flex-col md:flex-row items-center justify-around">
         <Logo width={206} height={67} />
         <div className="flex flex-col gap-4 md:flex-row items-center">
@@ -25,6 +25,7 @@ export default function Footer({ className }: FooterProps) {
           <Icon name={IconName.Linkedin} size="xs" />
         </Link>
       </div>
+      <div className="absolute bottom-[-20px] w-screen bg-light-blue h-5 md:hidden"></div>
     </footer>
   );
 }
